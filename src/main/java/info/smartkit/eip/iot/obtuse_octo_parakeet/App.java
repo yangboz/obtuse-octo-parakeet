@@ -12,7 +12,7 @@ public class App {
         //Detect the board we are running on.
         Board board = Platform.createBoard();
         //Set up a digital output
-        DigitalOutput digitalOutput = board.getPin(RaspiNames.P1_11).as(DigitalOutput.class);
+        DigitalOutput digitalOutput = board.getPin(RaspiNames.PWM_PIN).as(DigitalOutput.class);
         //Blink the LED
         digitalOutput.high();
         BulldogUtil.sleepMs(1000);
